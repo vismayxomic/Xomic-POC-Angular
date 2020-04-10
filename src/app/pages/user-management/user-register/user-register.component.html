@@ -1,0 +1,115 @@
+<form class="user-register-form"> 
+<mat-card class="user-register-card">
+  <mat-card-header>Register New User</mat-card-header>
+  <mat-card-content>     
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell">
+            <mat-form-field class="user-register-full-width" appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="Please Enter First Name">
+            </mat-form-field>
+          </div>
+          <div class="mdc-layout-grid__cell">
+            <mat-form-field class="user-register-full-width" appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="Please Enter Last Name">
+            </mat-form-field>
+          </div>
+          <div class="mdc-layout-grid__cell">
+            <mat-form-field class="user-register-full-width" appearance="outline">
+              <mat-label>Email ID</mat-label>
+              <input matInput type="email" placeholder="Please Enter Email ID">
+            </mat-form-field>
+          </div>
+          <div class="mdc-layout-grid__cell">
+            <mat-form-field class="user-register-full-width" appearance="outline">
+              <mat-label>Mobile No</mat-label>
+              <input matInput type="number" placeholder="Please Enter Mobile No">
+            </mat-form-field>
+          </div>
+          <div class="mdc-layout-grid__cell">
+            <mat-form-field class="user-register-full-width" appearance="outline">
+              <mat-label>Country</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let country of contries" [value]="country.id">
+                  {{country.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="mdc-layout-grid__cell">
+            <mat-form-field class="user-register-full-width" appearance="outline">
+              <mat-label>State</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let State of states" [value]="State.id">{{State.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="mdc-layout-grid__cell">
+            <mat-form-field class="user-register-full-width" appearance="outline">
+              <mat-label>Designation </mat-label>
+              <mat-select>
+                <mat-option *ngFor="let designation of designation" [value]="designation.id">{{designation.name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+    
+          <div class="mdc-layout-grid__cell">
+            <mat-form-field class="user-register-full-width" appearance="outline">
+              <mat-label>City</mat-label>
+              <input matInput placeholder="Please Enter City">
+            </mat-form-field>
+          </div>
+
+          <div class="mdc-layout-grid__cell user-register-section">
+            <label>Language Known: </label>
+            <mat-checkbox  appearance="outline"  class="user-register-margin-checkbox" *ngFor="let language of languagesKnown" [value]="language.id">{{language.languageName}}</mat-checkbox>
+          </div>
+          </div>
+      </div>
+      <mat-card class="user-register-card">
+        <mat-card-header>Experience Deails :- </mat-card-header>
+        <mat-card-content>
+              <div class="mdc-layout-grid">
+                  <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"> 
+                      <button mat-flat-button color="primary" >Add</button>
+                      <button mat-flat-button  color="warn">Remove</button>
+                    </div>
+                  </div>
+              </div>          
+              <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                  <div class="mdc-layout-grid__cell">
+                    <mat-form-field class="user-register-full-width" appearance="outline">
+                      <mat-label>No Of Years</mat-label>
+                      <input matInput placeholder="Please Enter No Of Years">
+                    </mat-form-field>
+                  </div>               
+              
+                  <div class="mdc-layout-grid__cell">
+                    <mat-form-field class="user-register-full-width" appearance="outline">
+                      <mat-label>Company Name</mat-label>
+                      <input matInput placeholder="Please Enter Company Name">
+                    </mat-form-field>
+                  </div>
+              
+                  <div class="mdc-layout-grid__cell">
+                    <mat-form-field class="user-register-full-width" appearance="outline">
+                      <mat-label>Job Description</mat-label>
+                      <input matInput placeholder="Please Enter Job Description">   
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>              
+        </mat-card-content>
+      </mat-card>
+  </mat-card-content>
+  <mat-card-actions>
+    <button  mat-flat-button color="primary">Submit</button>
+    <button  mat-flat-button color="warn">Clear</button>
+  </mat-card-actions>
+</mat-card>
+</form>  

@@ -1,0 +1,20 @@
+  .xomic-spacer {
+    flex: 1 1 auto;
+  }
+
+  .xomic-toolbar {
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+button {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+::ng-deep  mat-menu-item {
+  width: 200px !important; 
+  height: 120px !important; 
+}

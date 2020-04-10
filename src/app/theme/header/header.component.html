@@ -1,0 +1,17 @@
+<header class="xomic-toolbar">
+    <mat-toolbar  color="primary">
+        <mat-toolbar-row>
+            <button mat-button [routerLink]="['/dashboard']">Home</button>
+
+            <button mat-button  *ngIf="isAuthenticated" [matMenuTriggerFor]="belowMenu">User Management</button>
+            <mat-menu #belowMenu="matMenu" yPosition="below">
+              <button *ngIf="isRoleAdmin()" mat-menu-item [routerLink]="['/user-management/user-register']">Register User</button>
+              <button *ngIf="isRoleUser() || isRoleAdmin()" mat-menu-item [routerLink]="['/user-management/user-list']">Search User</button>
+            </mat-menu>
+
+            <span class="xomic-spacer"></span>
+            <button  mat-raised-button *ngIf="!isAuthenticated" routerLink="/authentication/login">Login</button>
+            <button mat-raised-button *ngIf="isAuthenticated" routerLink="/authentication/logout">Logout</button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</header>

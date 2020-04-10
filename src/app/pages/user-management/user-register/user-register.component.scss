@@ -1,0 +1,41 @@
+.user-register-form {
+    min-width: 90%;
+    max-width: 90%;
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  
+  .user-register-full-width {
+    width: 100%;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+
+  .user-register-section{     
+      display: flex;
+      align-content: center;
+      align-items: center;
+      height: 60px;
+  }
+
+  .user-register-margin-checkbox{
+    padding: 1px;
+    padding-left: 2%;
+    padding-right: 2%;
+  } 
+
+  .user-register-card{
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+    margin-right: 4%;
+  }
+
+  button {
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  
